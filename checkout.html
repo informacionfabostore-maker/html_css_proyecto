@@ -71,43 +71,57 @@
                       name="payment"
                       value="card"
                       checked
-                    />Misa<br /><small>Tarjeta</small></label
+                    /><span class="payment-mark payment-mark-card" aria-hidden="true">CARD</span
+                    ><small>Tarjeta</small></label
                   ><label class="payment-option"
                     ><input
                       class="visually-hidden"
                       type="radio"
                       name="payment"
                       value="mastercard"
-                    />Mastercard</label
+                    /><span class="payment-mark payment-mark-mastercard" aria-hidden="true"><i></i><i></i></span
+                    ><small>Mastercard</small></label
                   ><label class="payment-option"
                     ><input
                       class="visually-hidden"
                       type="radio"
                       name="payment"
                       value="paypal"
-                    />Paypal</label
+                    /><span class="payment-mark payment-mark-paypal" aria-hidden="true">P</span
+                    ><small>PayPal</small></label
                   >
                 </div>
               </fieldset>
               <button class="button button-primary" type="submit">
-                Pagar $224.50
+                Pagar $3.450.643
               </button>
             </form>
           </section>
           <aside class="panel order-summary">
             <h2>Resumen de tu orden</h2>
-            <!-- EDITA AQUI: actualiza productos y valores del resumen. -->
-            <div class="summary-line">
-              <span>Zapatillas Deportivas<br /><small>Cantidad: 1</small></span
-              ><strong>$120.00</strong>
+            <div class="checkout-product">
+              <img src="imagenes/ideapad-slim-3 (1).jpg" alt="Lenovo IdeaPad Slim 3" />
+              <div class="summary-line">
+                <span>IdeaPad Slim 3<br /><small>Cantidad: 1</small></span
+                ><strong>$1.699.900</strong>
+              </div>
             </div>
-            <!-- EDITA AQUI: producto del resumen. -->
-            <div class="summary-line">
-              <span>Auriculares Premium<br /><small>Cantidad: 1</small></span
-              ><strong>$99.50</strong>
+            <div class="checkout-product">
+              <img src="imagenes/airpods-4.jpg" alt="Apple AirPods 4" />
+              <div class="summary-line">
+                <span>AirPods 4<br /><small>Cantidad: 1</small></span
+                ><strong>$699.900</strong>
+              </div>
+            </div>
+            <div class="checkout-product">
+              <img src="imagenes/samsung-t7-shield (1).jpg" alt="Samsung T7 Shield" />
+              <div class="summary-line">
+                <span>T7 Shield<br /><small>Cantidad: 1</small></span
+                ><strong>$499.900</strong>
+              </div>
             </div>
             <div class="summary-line total">
-              <span>Total</span><strong>$224.50</strong>
+              <span>Total</span><strong>$3.450.643</strong>
             </div>
           </aside>
         </div>

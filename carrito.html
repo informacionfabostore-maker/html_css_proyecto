@@ -20,7 +20,10 @@
             aria-label="Volver al catalogo"
             >←</a
           ><a class="brand" href="index.html">CampusShop</a
-          ><span class="text-link">Mi carrito (3)</span>
+          ><span class="text-link cart-count cart-count-three">Mi carrito (3)</span
+          ><span class="text-link cart-count cart-count-two">Mi carrito (2)</span
+          ><span class="text-link cart-count cart-count-one">Mi carrito (1)</span
+          ><span class="text-link cart-count cart-count-zero">Mi carrito (0)</span>
         </div>
       </header>
       <main class="page-main">
@@ -33,7 +36,7 @@
             <!-- EDITA AQUI: cambia cada imagen, nombre, referencia, cantidad y precio. -->
             <article class="cart-item">
               <img
-                src="imagenes/ideapad-slim-3.jpg"
+                src="imagenes/ideapad-slim-3 (1).jpg"
                 alt="Lenovo IdeaPad Slim 3"
               />
               <div>
@@ -43,6 +46,8 @@
                   <label class="quantity">Cantidad<select aria-label="Cantidad de IdeaPad"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
                   <strong>$1.699.900</strong>
                 </div>
+                <input class="remove-item-toggle" type="checkbox" id="remove-ideapad" />
+                <label class="remove-item" for="remove-ideapad">Quitar del carrito</label>
               </div>
             </article>
             <!-- EDITA AQUI: producto del carrito. -->
@@ -58,12 +63,14 @@
                   <label class="quantity">Cantidad<select aria-label="Cantidad de AirPods"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
                   <strong>$699.900</strong>
                 </div>
+                <input class="remove-item-toggle" type="checkbox" id="remove-airpods" />
+                <label class="remove-item" for="remove-airpods">Quitar del carrito</label>
               </div>
             </article>
             <!-- EDITA AQUI: producto del carrito. -->
             <article class="cart-item">
               <img
-                src="imagenes/samsung-t7-shield.jpg"
+                src="imagenes/samsung-t7-shield (1).jpg"
                 alt="Samsung T7 Shield"
               />
               <div>
@@ -73,6 +80,8 @@
                   <label class="quantity">Cantidad<select aria-label="Cantidad de T7 Shield"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
                   <strong>$499.900</strong>
                 </div>
+                <input class="remove-item-toggle" type="checkbox" id="remove-t7shield" />
+                <label class="remove-item" for="remove-t7shield">Quitar del carrito</label>
               </div>
             </article>
           </section>
@@ -81,14 +90,45 @@
             aria-labelledby="summary-title"
           >
             <h2 id="summary-title">Resumen del pedido</h2>
-            <div class="summary-line">
-              <span>Subtotal</span><strong>$2.899.700</strong>
+            <div class="cart-total-state cart-total-all">
+              <div class="summary-line"><span>Subtotal</span><strong>$2.899.700</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$550.943</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$3.450.643</strong></div>
             </div>
-            <div class="summary-line">
-              <span>Impuestos</span><strong>$550.943</strong>
+            <div class="cart-total-state cart-total-no-ideapad">
+              <div class="summary-line"><span>Subtotal</span><strong>$1.199.800</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$227.962</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$1.427.762</strong></div>
             </div>
-            <div class="summary-line total">
-              <span>Total</span><strong>$3.450.643</strong>
+            <div class="cart-total-state cart-total-no-airpods">
+              <div class="summary-line"><span>Subtotal</span><strong>$2.199.800</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$417.962</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$2.617.762</strong></div>
+            </div>
+            <div class="cart-total-state cart-total-no-t7shield">
+              <div class="summary-line"><span>Subtotal</span><strong>$2.399.800</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$455.962</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$2.855.762</strong></div>
+            </div>
+            <div class="cart-total-state cart-total-one-ideapad">
+              <div class="summary-line"><span>Subtotal</span><strong>$1.699.900</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$322.981</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$2.022.881</strong></div>
+            </div>
+            <div class="cart-total-state cart-total-one-airpods">
+              <div class="summary-line"><span>Subtotal</span><strong>$699.900</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$132.981</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$832.881</strong></div>
+            </div>
+            <div class="cart-total-state cart-total-one-t7shield">
+              <div class="summary-line"><span>Subtotal</span><strong>$499.900</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$94.981</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$594.881</strong></div>
+            </div>
+            <div class="cart-total-state cart-total-empty">
+              <div class="summary-line"><span>Subtotal</span><strong>$0</strong></div>
+              <div class="summary-line"><span>Impuestos</span><strong>$0</strong></div>
+              <div class="summary-line total"><span>Total</span><strong>$0</strong></div>
             </div>
             <a class="button button-primary" href="checkout.html"
               >Proceder al pago</a
