@@ -1,0 +1,158 @@
+body {
+  min-height: 100vh;
+}
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: min(100% - 32px, var(--container-width));
+  margin-inline: auto;
+}
+.site-header {
+  background: rgba(6, 18, 42, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(70, 178, 230, 0.28);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.brand {
+  color: #a4f4ff;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-shadow: 0 0 18px rgba(83, 231, 255, 0.5);
+}
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 7px 2px 0;
+  background: #54e7ff;
+  border-radius: 50%;
+  box-shadow: 0 0 14px #54e7ff;
+}
+.main-nav {
+  display: none;
+  gap: var(--space-lg);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--primary);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.menu-trigger {
+  display: none;
+}
+.icon-button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.icon-button:hover {
+  background: var(--surface-alt);
+  border-color: var(--border);
+}
+.page-main {
+  flex: 1;
+  padding-block: clamp(28px, 5vw, 64px) 104px;
+  position: relative;
+}
+.page-main::before {
+  content: "// CAMPUSSHOP / SYSTEM ONLINE";
+  display: block;
+  width: min(100% - 32px, var(--container-width));
+  margin: 0 auto 18px;
+  color: rgba(97, 228, 255, 0.5);
+  font-family: Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+}
+.page-heading {
+  margin-bottom: var(--space-lg);
+}
+.page-heading h1,
+.page-heading h2 {
+  margin: 0 0 var(--space-xs);
+  color: #f4fbff;
+  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  line-height: 1.02;
+}
+.page-heading p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+.section {
+  margin-block: clamp(40px, 7vw, 88px);
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.section-heading h2 {
+  margin: 0;
+  color: #f4fbff;
+  font-size: 1.25rem;
+}
+.site-footer {
+  padding: var(--space-lg) 0;
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border);
+  background: rgba(11, 30, 61, 0.92);
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: var(--space-sm);
+  background: rgba(6, 18, 42, 0.95);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 22px rgba(0, 190, 255, 0.12);
+}
+.bottom-nav a {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.bottom-nav a[aria-current="page"] {
+  color: var(--primary);
+}
+.bottom-nav span:first-child {
+  font-size: 1.1rem;
+}

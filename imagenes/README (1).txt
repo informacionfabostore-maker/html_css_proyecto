@@ -1,0 +1,1 @@
+Coloca aqui las imagenes del proyecto. Los HTML ya usan rutas como imagenes/producto-01.jpg. Puedes reemplazar los nombres en los comentarios EDITA AQUI de cada pagina.
