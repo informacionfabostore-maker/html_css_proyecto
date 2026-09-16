@@ -664,24 +664,117 @@
 .empty-state h1 {
   margin-bottom: var(--space-sm);
 }
+.order-history-list {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 704px);
+  margin-inline: auto;
+}
 .order-card {
   display: grid;
-  gap: var(--space-md);
-  padding: var(--space-lg);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-medium);
-  box-shadow: var(--shadow-card);
+  gap: 0;
+  min-height: 198px;
+  padding: 16px 20px 18px;
+  background: rgba(237, 248, 255, 0.96);
+  border: 1px solid rgba(35, 70, 108, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(3, 20, 41, 0.16);
 }
-.order-card header {
+.order-card-topline,
+.order-card-bottomline {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+}
+.order-card-topline {
+  color: #06122a;
+  font-size: clamp(1.2rem, 4vw, 1.55rem);
+  line-height: 1.15;
+}
+.order-total {
+  white-space: nowrap;
+}
+.order-card time {
+  display: block;
+  margin-top: 3px;
+  color: #6b778a;
+  font-size: clamp(1rem, 3vw, 1.28rem);
+  line-height: 1.2;
+}
+.order-card-bottomline {
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
 }
 .status {
-  color: var(--success);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 1rem;
   font-weight: 800;
+}
+.status span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.85rem;
+}
+.status-delivered {
+  color: var(--success);
+  background: rgba(143, 199, 232, 0.35);
+}
+.status-shipping {
+  color: var(--warning);
+  background: rgba(255, 189, 88, 0.28);
+}
+.status-canceled {
+  color: var(--error);
+  background: rgba(255, 157, 153, 0.28);
+}
+.order-detail-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 0 18px;
+  color: #31545b;
+  background: rgba(35, 70, 108, 0.1);
+  border-radius: 16px;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+.order-detail-button span {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.order-detail-button:hover {
+  color: var(--text);
+  background: var(--secondary);
+}
+.history-header-brand {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+.history-header-brand .brand {
+  font-size: 1.15rem;
+}
+.page-header-title {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 .payment-options {
   display: grid;
