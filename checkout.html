@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Checkout CampusShop" />
+    <title>CampusShop | Checkout</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a
+            class="icon-button"
+            href="carrito.html"
+            aria-label="Volver al carrito"
+            >←</a
+          ><a class="brand" href="index.html">CampusShop</a
+          ><span class="text-link">Checkout</span>
+        </div>
+      </header>
+      <main class="page-main">
+        <div class="container checkout-layout">
+          <section>
+            <div class="page-heading">
+              <h1>Envio</h1>
+              <p>Completa tus datos para recibir tu pedido.</p>
+            </div>
+            <form class="panel form-grid" action="historial.html" method="get">
+              <div class="field">
+                <label for="name">Nombre completo</label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ingresa tu nombre completo"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="address">Direccion</label
+                ><input
+                  id="address"
+                  name="address"
+                  type="text"
+                  placeholder="Ingresa tu direccion"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="city">Ciudad</label
+                ><input
+                  id="city"
+                  name="city"
+                  type="text"
+                  placeholder="Tu ciudad"
+                  required
+                />
+              </div>
+              <fieldset>
+                <legend>Metodo de pago</legend>
+                <div class="payment-options">
+                  <label class="payment-option selected"
+                    ><input
+                      class="visually-hidden"
+                      type="radio"
+                      name="payment"
+                      value="card"
+                      checked
+                    />Misa<br /><small>Tarjeta</small></label
+                  ><label class="payment-option"
+                    ><input
+                      class="visually-hidden"
+                      type="radio"
+                      name="payment"
+                      value="mastercard"
+                    />Mastercard</label
+                  ><label class="payment-option"
+                    ><input
+                      class="visually-hidden"
+                      type="radio"
+                      name="payment"
+                      value="paypal"
+                    />Paypal</label
+                  >
+                </div>
+              </fieldset>
+              <button class="button button-primary" type="submit">
+                Pagar $224.50
+              </button>
+            </form>
+          </section>
+          <aside class="panel order-summary">
+            <h2>Resumen de tu orden</h2>
+            <!-- EDITA AQUI: actualiza productos y valores del resumen. -->
+            <div class="summary-line">
+              <span>Zapatillas Deportivas<br /><small>Cantidad: 1</small></span
+              ><strong>$120.00</strong>
+            </div>
+            <!-- EDITA AQUI: producto del resumen. -->
+            <div class="summary-line">
+              <span>Auriculares Premium<br /><small>Cantidad: 1</small></span
+              ><strong>$99.50</strong>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span><strong>$224.50</strong>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
