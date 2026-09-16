@@ -27,11 +27,20 @@ body {
   gap: var(--space-md);
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: #a4f4ff;
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: -0.05em;
   text-shadow: 0 0 18px rgba(83, 231, 255, 0.5);
+}
+.brand img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 .brand::before {
   content: "";
@@ -60,7 +69,56 @@ body {
   gap: var(--space-sm);
 }
 .menu-trigger {
+  display: grid;
+  flex: 0 0 auto;
+}
+.category-menu-container {
+  flex: 0 0 auto;
+}
+.category-menu-container summary {
+  list-style: none;
+}
+.category-menu-container summary::-webkit-details-marker {
   display: none;
+}
+.category-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: max(16px, calc((100vw - var(--container-width)) / 2));
+  z-index: 30;
+  width: min(280px, calc(100vw - 32px));
+  padding: 14px;
+  background: rgba(11, 30, 61, 0.98);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-card);
+}
+.category-menu-title {
+  margin: 0 0 8px;
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.category-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  color: var(--text);
+  border-radius: var(--radius-small);
+  font-weight: 700;
+}
+.category-menu a:hover,
+.category-menu a:focus-visible {
+  color: var(--neon);
+  background: var(--surface-alt);
+}
+.category-menu a span {
+  color: var(--primary);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
 }
 .icon-button {
   width: 40px;
@@ -136,7 +194,7 @@ body {
   right: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: var(--space-sm);
   background: rgba(6, 18, 42, 0.95);
   border-top: 1px solid var(--border);
@@ -155,4 +213,15 @@ body {
 }
 .bottom-nav span:first-child {
   font-size: 1.1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }

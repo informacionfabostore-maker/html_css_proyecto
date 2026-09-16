@@ -1,0 +1,59 @@
+@media (max-width: 600px) {
+	.container {
+		width: min(100% - 24px, var(--container-width));
+	}
+
+	.order-history-list {
+		gap: 10px;
+	}
+
+	.order-card {
+		min-height: 176px;
+		padding: 14px 14px 15px;
+		border-radius: 20px;
+	}
+
+	.order-card-topline {
+		align-items: flex-start;
+		font-size: 1.12rem;
+	}
+
+	.order-card-topline strong:first-child {
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+
+	.order-card time {
+		margin-top: 6px;
+		font-size: 0.98rem;
+	}
+
+	.order-card-bottomline {
+		align-items: center;
+		flex-direction: row;
+		gap: 8px;
+		padding-top: 10px;
+	}
+
+	.status {
+		align-self: center;
+		min-width: 0;
+		min-height: 46px;
+		padding-inline: 16px;
+		font-size: 0.9rem;
+	}
+
+	.order-detail-button {
+		flex: 1 1 auto;
+		width: auto;
+		min-width: 0;
+		min-height: 50px;
+		padding-inline: 14px;
+		border-radius: 14px;
+		font-size: 0.92rem;
+	}
+
+	.order-detail-button span {
+		font-size: 1.7rem;
+	}
+}
