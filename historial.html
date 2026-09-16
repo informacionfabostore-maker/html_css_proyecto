@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Historial de pedidos CampusShop" />
+    <title>CampusShop | Historial</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a
+            class="icon-button"
+            href="perfil.html"
+            aria-label="Volver al perfil"
+            >←</a
+          ><a class="brand" href="index.html">CampusShop</a
+          ><a class="icon-button" href="carrito.html" aria-label="Ver carrito"
+            >🛒</a
+          >
+        </div>
+      </header>
+      <main class="page-main">
+        <div class="container">
+          <div class="page-heading">
+            <h1>Mis pedidos</h1>
+            <p>Consulta tus compras anteriores.</p>
+          </div>
+          <section class="cart-list" aria-label="Pedidos anteriores">
+            <!-- EDITA AQUI: duplica este pedido para añadir mas registros al historial. -->
+            <article class="order-card">
+              <header>
+                <strong>Orden #CS-1024</strong
+                ><span class="status">Entregado</span>
+              </header>
+              <p><strong>Fecha:</strong> 15 de septiembre, 2026</p>
+              <p>Sudadera Campus Classic · 1 unidad</p>
+              <div class="card-actions">
+                <strong>$49.99</strong
+                ><a class="text-link" href="producto.html">Ver detalle</a>
+              </div>
+            </article>
+            <!-- EDITA AQUI: pedido anterior. -->
+            <article class="order-card">
+              <header>
+                <strong>Orden #CS-0987</strong
+                ><span class="status">En camino</span>
+              </header>
+              <p><strong>Fecha:</strong> 02 de septiembre, 2026</p>
+              <p>Taza de Ceramica Campus · 1 unidad</p>
+              <div class="card-actions">
+                <strong>$12.50</strong
+                ><a class="text-link" href="producto.html">Ver detalle</a>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container">CampusShop · Historial de compras</div>
+      </footer>
+      <nav class="bottom-nav" aria-label="Navegacion movil">
+        <a href="index.html"><span>⌂</span>Inicio</a
+        ><a href="catalogo.html"><span>▦</span>Catalogo</a
+        ><a href="carrito.html"><span>🛒</span>Carrito</a
+        ><a href="perfil.html" aria-current="page"><span>♙</span>Perfil</a>
+      </nav>
+    </div>
+  </body>
+</html>
