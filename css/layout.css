@@ -27,11 +27,20 @@ body {
   gap: var(--space-md);
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: #a4f4ff;
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: -0.05em;
   text-shadow: 0 0 18px rgba(83, 231, 255, 0.5);
+}
+.brand img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 .brand::before {
   content: "";
@@ -185,7 +194,7 @@ body {
   right: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: var(--space-sm);
   background: rgba(6, 18, 42, 0.95);
   border-top: 1px solid var(--border);
@@ -204,4 +213,15 @@ body {
 }
 .bottom-nav span:first-child {
   font-size: 1.1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
