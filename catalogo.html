@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Tecnologia para estudio, trabajo y programación."
+    />
+    <title>CampusShop | Catálogo</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">CampusShop</a>
+          <nav class="main-nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a
+            ><a href="catalogo.html" aria-current="page">Catálogo</a
+            ><a href="historial.html">Pedidos</a
+            ><a href="perfil.html">Perfil</a>
+          </nav>
+          <a class="icon-button" href="carrito.html" aria-label="Carrito">🛒</a>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <div class="container">
+          <section class="page-heading">
+            <p class="eyebrow">Campus tech / selección 2026</p>
+            <h1>Equipos para tu próximo proyecto.</h1>
+            <p>
+              Laptops, audio, periféricos y almacenamiento de marcas
+              reconocidas.
+            </p>
+          </section>
+
+          <div class="filter-row">
+            <select aria-label="Categoría">
+              <option>Categoría</option>
+              <option>Laptops</option>
+              <option>Audio</option>
+              <option>Periféricos</option>
+              <option>Almacenamiento</option>
+              <option>Tablets</option>
+            </select>
+
+            <select aria-label="Precio">
+              <option>Precio</option>
+              <option>Menos de $300.000</option>
+              <option>$300.000 a $1.500.000</option>
+              <option>Más de $1.500.000</option>
+            </select>
+          </div>
+
+          <div class="catalog-sections">
+            <section class="catalog-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">01 / Computación</p>
+                  <h2>Laptops</h2>
+                </div>
+                <span class="product-kicker">5 productos</span>
+              </div>
+
+              <div class="product-grid">
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/ideaPad-slim-3.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/ideapad-slim-3.jpg"
+                    alt="Lenovo IdeaPad Slim 3"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>IdeaPad Slim 3</h3>
+                    <p>Lenovo · 15.6 pulgadas · 8 GB RAM</p>
+                    <p class="price">$1.699.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#ideapad"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/hp-laptop-15.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/hp-laptop-15.jpg"
+                    alt="HP Laptop 15"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>Laptop 15</h3>
+                    <p>HP · 15.6 pulgadas · SSD 512 GB</p>
+                    <p class="price">$1.899.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#hplaptop"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/vivobook-15.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/vivobook-15.jpg"
+                    alt="ASUS Vivobook 15"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-sale">Oferta</span>
+                    <h3>Vivobook 15</h3>
+                    <p>ASUS · pantalla Full HD · 8 GB RAM</p>
+                    <p class="price">$1.799.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#vivobook"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/aspire-go.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/aspire-go.jpg"
+                    alt="Acer Aspire Go"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>Aspire Go</h3>
+                    <p>Acer · 15.6 pulgadas · SSD 512 GB</p>
+                    <p class="price">$1.549.900</p>
+                    <a class="button button-primary" href="producto.html#aspire"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/vivobook-go-15.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/vivobook-go-15.jpg"
+                    alt="ASUS Vivobook Go 15"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>Vivobook Go 15</h3>
+                    <p>ASUS · portátil ligero · 8 GB RAM</p>
+                    <p class="price">$1.499.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#vivobookgo"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="catalog-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">02 / Movilidad</p>
+                  <h2>Tablet</h2>
+                </div>
+                <span class="product-kicker">1 producto</span>
+              </div>
+
+              <div class="product-grid">
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/galaxy-tab-a9.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/galaxy-tab-a9.jpg"
+                    alt="Samsung Galaxy Tab A9"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-sale">Oferta</span>
+                    <h3>Galaxy Tab A9</h3>
+                    <p>Samsung · pantalla 8.7 pulgadas · Wi-Fi</p>
+                    <p class="price">$599.900</p>
+                    <a class="button button-primary" href="producto.html#taba9"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="catalog-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">03 / Sonido</p>
+                  <h2>Audio</h2>
+                </div>
+                <span class="product-kicker">3 productos</span>
+              </div>
+
+              <div class="product-grid">
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/airpods-4.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/airpods-4.jpg"
+                    alt="Apple AirPods 4"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Nuevo</span>
+                    <h3>AirPods 4</h3>
+                    <p>Apple · estuche de carga · Bluetooth</p>
+                    <p class="price">$699.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#airpods"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/tune-770nc.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/tune-770nc.jpg"
+                    alt="JBL Tune 770NC"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-sale">Oferta</span>
+                    <h3>Tune 770NC</h3>
+                    <p>JBL · cancelación de ruido · inalámbricos</p>
+                    <p class="price">$349.900</p>
+                    <a class="button button-primary" href="producto.html#tune"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/galaxy-buds-fe.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/galaxy-buds-fe.jpg"
+                    alt="Samsung Galaxy Buds FE"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>Galaxy Buds FE</h3>
+                    <p>Samsung · cancelación activa · Bluetooth</p>
+                    <p class="price">$299.900</p>
+                    <a class="button button-primary" href="producto.html#buds"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="catalog-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">04 / Escritorio</p>
+                  <h2>Periféricos y conectividad</h2>
+                </div>
+                <span class="product-kicker">4 productos</span>
+              </div>
+
+              <div class="product-grid">
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/mx-master-3s.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/mx-master-3s.jpg"
+                    alt="Logitech MX Master 3S"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Recomendado</span>
+                    <h3>MX Master 3S</h3>
+                    <p>Logitech · mouse inalámbrico · ergonómico</p>
+                    <p class="price">$399.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#mxmaster"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/pebble-keys-2.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/pebble-keys-2.jpg"
+                    alt="Logitech Pebble Keys 2 K380s"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>Pebble Keys 2 K380s</h3>
+                    <p>Logitech · teclado compacto · Bluetooth</p>
+                    <p class="price">$169.900</p>
+                    <a class="button button-primary" href="producto.html#pebble"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/anker-332-usbc.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/anker-332-usbc.jpg"
+                    alt="Anker 332 USB-C Hub"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>332 USB-C Hub</h3>
+                    <p>Anker · HDMI · USB 3.0 · compacto</p>
+                    <p class="price">$149.900</p>
+                    <a class="button button-primary" href="producto.html#anker"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/c920.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/c920.jpg"
+                    alt="Logitech C920"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Disponible</span>
+                    <h3>C920</h3>
+                    <p>Logitech · webcam Full HD · micrófono estéreo</p>
+                    <p class="price">$299.900</p>
+                    <a class="button button-primary" href="producto.html#c920"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="catalog-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">05 / Almacenamiento</p>
+                  <h2>Unidades externas</h2>
+                </div>
+                <span class="product-kicker">2 productos</span>
+              </div>
+
+              <div class="product-grid">
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/samsung-t7-shield.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/samsung-t7-shield.jpg"
+                    alt="Samsung T7 Shield"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-stock">Resistente</span>
+                    <h3>T7 Shield</h3>
+                    <p>Samsung · SSD externo · 1 TB</p>
+                    <p class="price">$499.900</p>
+                    <a
+                      class="button button-primary"
+                      href="producto.html#t7shield"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+
+                <!-- EDITA AQUI SOLO LA IMAGEN: agrega tu foto en imagenes/kingston-xs1000.jpg -->
+                <article class="product-card">
+                  <img
+                    class="product-card-image"
+                    src="imagenes/kingston-xs1000.jpg"
+                    alt="Kingston XS1000 1TB"
+                  />
+                  <div class="product-card-body">
+                    <span class="badge badge-sale">Oferta</span>
+                    <h3>XS1000 1TB</h3>
+                    <p>Kingston · SSD externo · USB-C</p>
+                    <p class="price">$379.900</p>
+                    <a class="button button-primary" href="producto.html#xs1000"
+                      >Ver producto</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          CampusShop · Tecnología para crear sin límites
+        </div>
+      </footer>
+
+      <nav class="bottom-nav" aria-label="Navegación móvil">
+        <a href="index.html"><span>⌂</span>Inicio</a
+        ><a href="catalogo.html" aria-current="page"><span>▦</span>Catálogo</a
+        ><a href="carrito.html"><span>🛒</span>Carrito</a
+        ><a href="perfil.html"><span>♙</span>Perfil</a>
+      </nav>
+    </div>
+  </body>
+</html>
