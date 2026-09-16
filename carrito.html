@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Carrito de compra CampusShop" />
+    <title>CampusShop | Mi carrito</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a
+            class="icon-button"
+            href="catalogo.html"
+            aria-label="Volver al catalogo"
+            >←</a
+          ><a class="brand" href="index.html">CampusShop</a
+          ><span class="text-link">Mi carrito (3)</span>
+        </div>
+      </header>
+      <main class="page-main">
+        <div class="container">
+          <div class="page-heading">
+            <h1>Mi carrito</h1>
+            <p>Revisa tus productos antes de continuar.</p>
+          </div>
+          <section class="cart-list" aria-label="Productos del carrito">
+            <!-- EDITA AQUI: cambia cada imagen, nombre, referencia, cantidad y precio. -->
+            <article class="cart-item">
+              <img
+                src="imagenes/ideapad-slim-3.jpg"
+                alt="Lenovo IdeaPad Slim 3"
+              />
+              <div>
+                <h3>IdeaPad Slim 3</h3>
+                <p>Ref: #SKU12345</p>
+                <div class="card-actions">
+                  <label class="quantity">Cantidad<select aria-label="Cantidad de IdeaPad"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+                  <strong>$1.699.900</strong>
+                </div>
+              </div>
+            </article>
+            <!-- EDITA AQUI: producto del carrito. -->
+            <article class="cart-item">
+              <img
+                src="imagenes/airpods-4.jpg"
+                alt="Apple AirPods 4"
+              />
+              <div>
+                <h3>Apple AirPods 4</h3>
+                <p>Ref: #SKU67890</p>
+                <div class="card-actions">
+                  <label class="quantity">Cantidad<select aria-label="Cantidad de AirPods"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+                  <strong>$699.900</strong>
+                </div>
+              </div>
+            </article>
+            <!-- EDITA AQUI: producto del carrito. -->
+            <article class="cart-item">
+              <img
+                src="imagenes/samsung-t7-shield.jpg"
+                alt="Samsung T7 Shield"
+              />
+              <div>
+                <h3>Samsung T7 Shield</h3>
+                <p>Ref: #SKU11223</p>
+                <div class="card-actions">
+                  <label class="quantity">Cantidad<select aria-label="Cantidad de T7 Shield"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+                  <strong>$499.900</strong>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section
+            class="panel order-summary section"
+            aria-labelledby="summary-title"
+          >
+            <h2 id="summary-title">Resumen del pedido</h2>
+            <div class="summary-line">
+              <span>Subtotal</span><strong>$2.899.700</strong>
+            </div>
+            <div class="summary-line">
+              <span>Impuestos</span><strong>$550.943</strong>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span><strong>$3.450.643</strong>
+            </div>
+            <a class="button button-primary" href="checkout.html"
+              >Proceder al pago</a
+            >
+          </section>
+        </div>
+      </main>
+      <nav class="bottom-nav" aria-label="Navegacion movil">
+        <a href="index.html"><span>⌂</span>Inicio</a
+        ><a href="catalogo.html"><span>▦</span>Catalogo</a
+        ><a href="carrito.html" aria-current="page"><span>🛒</span>Carrito</a
+        ><a href="perfil.html"><span>♙</span>Perfil</a>
+      </nav>
+    </div>
+  </body>
+</html>
