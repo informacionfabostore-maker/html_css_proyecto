@@ -407,5 +407,84 @@
         ><a href="perfil.html"><span>♙</span>Perfil</a>
       </nav>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const categorySelect = document.querySelector('select[aria-label="Categoría"]');
+        const priceSelect = document.querySelector('select[aria-label="Precio"]');
+
+        const categoryMap = {
+          Laptops: 'laptops',
+          Audio: 'audio',
+          'Periféricos': 'perifericos',
+          Almacenamiento: 'almacenamiento',
+          Tablets: 'tablet'
+        };
+
+        if (categorySelect) {
+          categorySelect.addEventListener('change', () => {
+            const selected = categorySelect.value;
+            const sectionId = categoryMap[selected];
+
+            if (!sectionId) {
+              return;
+            }
+
+            const section = document.getElementById(sectionId);
+            if (!section) {
+              return;
+            }
+
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            section.classList.remove('is-highlighted');
+            void section.offsetWidth;
+            section.classList.add('is-highlighted');
+
+            window.setTimeout(() => {
+              section.classList.remove('is-highlighted');
+            }, 1800);
+          });
+        }
+
+        if (priceSelect) {
+          priceSelect.addEventListener('change', () => {
+            const selected = priceSelect.value;
+            const productCards = document.querySelectorAll('.product-card');
+
+            if (!selected || selected === 'Precio') {
+              productCards.forEach((card) => {
+                card.style.display = '';
+              });
+              return;
+            }
+
+            const ranges = {
+              'Menos de $300.000': { max: 300000 },
+              '$300.000 a $1.500.000': { min: 300000, max: 1500000 },
+              'Más de $1.500.000': { min: 1500000 }
+            };
+
+            const range = ranges[selected];
+
+            productCards.forEach((card) => {
+              const priceText = card.querySelector('.price')?.textContent || '';
+              const numericPrice = Number(priceText.replace(/[^0-9]/g, ''));
+
+              let shouldShow = true;
+
+              if (Number.isFinite(numericPrice)) {
+                shouldShow =
+                  (!range.min || numericPrice >= range.min) &&
+                  (!range.max || numericPrice <= range.max);
+              } else {
+                shouldShow = false;
+              }
+
+              card.style.display = shouldShow ? '' : 'none';
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
