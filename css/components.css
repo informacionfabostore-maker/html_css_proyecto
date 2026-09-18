@@ -70,6 +70,15 @@
   background: rgba(11, 30, 61, 0.55);
   border-color: var(--border);
 }
+body:has(#theme-switch:checked) .button-quiet,
+body:has(#theme-switch:checked) .search-bar,
+body:has(#theme-switch:checked) .category-card,
+body:has(#theme-switch:checked) .product-card {
+  background: rgba(255, 255, 255, 0.82);
+}
+body:has(#theme-switch:checked) .search-bar input {
+  color: var(--text);
+}
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
