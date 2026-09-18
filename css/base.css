@@ -41,7 +41,7 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(3, 14, 37, 0.82), rgba(3, 14, 37, 0.94)),
-    url("../imagenes/fondo-futurista.jpg") center / cover fixed,
+    url("../imagenes/fondo-futurista (1).jpg") center / cover fixed,
     var(--background);
   color: var(--text);
   font-family: var(--font-family);
@@ -93,4 +93,21 @@ h3 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+body:has(#theme-switch:checked) {
+  --background: #f3f6f7;
+  --surface: #ffffff;
+  --surface-alt: #e7eff1;
+  --text: #1d343b;
+  --text-secondary: #587078;
+  --border: #c7d6da;
+  --neon: #267a86;
+  --shadow-card: 0 10px 24px rgba(39, 70, 78, 0.12);
+  background: var(--background);
+  color: var(--text);
+}
+
+body:has(#theme-switch:checked)::before {
+  opacity: 0.04;
 }

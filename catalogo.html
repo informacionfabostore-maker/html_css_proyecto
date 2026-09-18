@@ -42,23 +42,29 @@
             </p>
           </section>
 
-          <div class="filter-row">
-            <select aria-label="Categoría">
-              <option>Categoría</option>
-              <option>Laptops</option>
-              <option>Audio</option>
-              <option>Periféricos</option>
-              <option>Almacenamiento</option>
-              <option>Tablets</option>
-            </select>
+          <form class="search-bar" action="catalogo.html" method="get">
+            <label class="visually-hidden" for="product-search">Buscar productos</label>
+            <input
+              id="product-search"
+              name="q"
+              type="search"
+              placeholder="Buscar productos"
+              autocomplete="off"
+            />
+            <button class="button button-primary" type="submit">Buscar</button>
+          </form>
 
-            <select aria-label="Precio">
-              <option>Precio</option>
-              <option>Menos de $300.000</option>
-              <option>$300.000 a $1.500.000</option>
-              <option>Más de $1.500.000</option>
-            </select>
-          </div>
+          <details class="catalog-filter-menu">
+            <summary class="button button-secondary">Explorar categorías</summary>
+            <nav aria-label="Ir a una categoría">
+              <a href="#laptops">Laptops</a>
+              <a href="#pantallas">Pantallas</a>
+              <a href="#audio">Audio</a>
+              <a href="#perifericos">Periféricos</a>
+              <a href="#almacenamiento">Almacenamiento</a>
+              <a href="#tablet">Tablets</a>
+            </nav>
+          </details>
 
           <div class="catalog-sections">
             <section class="catalog-section" id="laptops">
@@ -166,6 +172,7 @@
             </section>
 
             <section class="catalog-section" id="tablet">
+              <span class="catalog-anchor" id="pantallas" aria-hidden="true"></span>
               <div class="section-heading">
                 <div>
                   <p class="eyebrow">02 / Movilidad</p>
@@ -408,83 +415,5 @@
       </nav>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const categorySelect = document.querySelector('select[aria-label="Categoría"]');
-        const priceSelect = document.querySelector('select[aria-label="Precio"]');
-
-        const categoryMap = {
-          Laptops: 'laptops',
-          Audio: 'audio',
-          'Periféricos': 'perifericos',
-          Almacenamiento: 'almacenamiento',
-          Tablets: 'tablet'
-        };
-
-        if (categorySelect) {
-          categorySelect.addEventListener('change', () => {
-            const selected = categorySelect.value;
-            const sectionId = categoryMap[selected];
-
-            if (!sectionId) {
-              return;
-            }
-
-            const section = document.getElementById(sectionId);
-            if (!section) {
-              return;
-            }
-
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            section.classList.remove('is-highlighted');
-            void section.offsetWidth;
-            section.classList.add('is-highlighted');
-
-            window.setTimeout(() => {
-              section.classList.remove('is-highlighted');
-            }, 1800);
-          });
-        }
-
-        if (priceSelect) {
-          priceSelect.addEventListener('change', () => {
-            const selected = priceSelect.value;
-            const productCards = document.querySelectorAll('.product-card');
-
-            if (!selected || selected === 'Precio') {
-              productCards.forEach((card) => {
-                card.style.display = '';
-              });
-              return;
-            }
-
-            const ranges = {
-              'Menos de $300.000': { max: 300000 },
-              '$300.000 a $1.500.000': { min: 300000, max: 1500000 },
-              'Más de $1.500.000': { min: 1500000 }
-            };
-
-            const range = ranges[selected];
-
-            productCards.forEach((card) => {
-              const priceText = card.querySelector('.price')?.textContent || '';
-              const numericPrice = Number(priceText.replace(/[^0-9]/g, ''));
-
-              let shouldShow = true;
-
-              if (Number.isFinite(numericPrice)) {
-                shouldShow =
-                  (!range.min || numericPrice >= range.min) &&
-                  (!range.max || numericPrice <= range.max);
-              } else {
-                shouldShow = false;
-              }
-
-              card.style.display = shouldShow ? '' : 'none';
-            });
-          });
-        }
-      });
-    </script>
   </body>
 </html>
