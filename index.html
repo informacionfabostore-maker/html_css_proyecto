@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
+  <body class="home-page">
     <div class="site-shell">
       <header class="site-header">
         <div class="container header-inner">
@@ -49,6 +49,18 @@
       </header>
       <main class="page-main">
         <div class="container">
+          <form class="search-bar home-search" action="catalogo.html" method="get">
+            <label class="visually-hidden" for="home-product-search">Buscar productos</label>
+            <span class="home-search-icon" aria-hidden="true">⌕</span>
+            <input
+              id="home-product-search"
+              name="q"
+              type="search"
+              placeholder="Buscar productos, marcas..."
+              autocomplete="off"
+            />
+            <button class="button button-primary" type="submit" aria-label="Buscar">Buscar</button>
+          </form>
           <section class="hero section">
             <div class="hero-copy">
               <p class="eyebrow">Hardware · software · productividad</p>
@@ -94,17 +106,17 @@
               <a class="text-link" href="catalogo.html">Ver todas</a>
             </div>
             <div class="category-grid">
-              <a class="category-card" href="catalogo.html"
+              <a class="category-card" href="catalogo.html#perifericos"
                 ><span class="category-icon">01</span
                 ><strong>Periféricos</strong><small>Teclados y mouse</small></a
-              ><a class="category-card" href="catalogo.html"
+              ><a class="category-card" href="catalogo.html#pantallas"
                 ><span class="category-icon">02</span><strong>Pantallas</strong
                 ><small>Monitores para crear</small></a
-              ><a class="category-card" href="catalogo.html"
+              ><a class="category-card" href="catalogo.html#tablet"
                 ><span class="category-icon">03</span
                 ><strong>Componentes</strong
                 ><small>RAM y procesadores</small></a
-              ><a class="category-card" href="catalogo.html"
+              ><a class="category-card" href="catalogo.html#almacenamiento"
                 ><span class="category-icon">04</span
                 ><strong>Almacenamiento</strong
                 ><small>SSD y accesorios</small></a
@@ -121,7 +133,7 @@
               <article class="product-card">
                 <img
                   class="product-card-image"
-                  src="/imagenes/ideapad-slim-3 (1).jpg"
+                  src="imagenes/ideapad-slim-3 (1).jpg"
                   alt="Lenovo IdeaPad Slim 3"
                 />
                 <div class="product-card-body">

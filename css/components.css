@@ -219,6 +219,11 @@ body:has(#theme-switch:checked) .search-bar input {
   color: var(--text);
   background: transparent;
 }
+.search-bar .button {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding-block: 7px;
+}
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -415,6 +420,69 @@ body:has(#theme-switch:checked) .search-bar input {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-medium);
+}
+.filter-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 12px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+  font-size: 0.86rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.filter-link:hover,
+.filter-link:focus-visible {
+  color: var(--neon);
+  border-color: var(--primary);
+}
+.catalog-filter-menu {
+  position: relative;
+  width: fit-content;
+  margin-bottom: var(--space-lg);
+}
+.catalog-filter-menu summary {
+  list-style: none;
+}
+.catalog-filter-menu summary::-webkit-details-marker {
+  display: none;
+}
+.catalog-filter-menu summary::after {
+  content: " +";
+}
+.catalog-filter-menu[open] summary::after {
+  content: " -";
+}
+.catalog-filter-menu nav {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 15;
+  display: grid;
+  min-width: 220px;
+  padding: var(--space-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-card);
+}
+.catalog-filter-menu nav a {
+  padding: 10px 12px;
+  color: var(--text);
+  border-radius: var(--radius-small);
+  font-weight: 700;
+}
+.catalog-filter-menu nav a:hover,
+.catalog-filter-menu nav a:focus-visible {
+  color: var(--neon);
+  background: var(--surface-alt);
+}
+.catalog-anchor {
+  display: block;
+  scroll-margin-top: 100px;
 }
 .form-grid {
   display: grid;
@@ -1013,4 +1081,56 @@ body:has(#theme-switch:checked) .search-bar input {
 }
 .cart-item {
   grid-template-columns: 88px 1fr;
+}
+
+body:has(#theme-switch:checked) .category-menu,
+body:has(#theme-switch:checked) .catalog-filter-menu nav,
+body:has(#theme-switch:checked) .search-bar,
+body:has(#theme-switch:checked) .category-card,
+body:has(#theme-switch:checked) .product-card,
+body:has(#theme-switch:checked) .cart-item,
+body:has(#theme-switch:checked) .panel {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+body:has(#theme-switch:checked) .category-menu a,
+body:has(#theme-switch:checked) .catalog-filter-menu nav a,
+body:has(#theme-switch:checked) .category-card,
+body:has(#theme-switch:checked) .product-card h3,
+body:has(#theme-switch:checked) .cart-item h3,
+body:has(#theme-switch:checked) .search-bar input {
+  color: var(--text);
+}
+
+body:has(#theme-switch:checked) .category-card small,
+body:has(#theme-switch:checked) .product-card p,
+body:has(#theme-switch:checked) .page-heading p {
+  color: var(--text-secondary);
+}
+
+body:has(#theme-switch:checked) .button-secondary,
+body:has(#theme-switch:checked) .button-quiet,
+body:has(#theme-switch:checked) .filter-link,
+body:has(#theme-switch:checked) .catalog-filter-menu nav a:hover,
+body:has(#theme-switch:checked) .catalog-filter-menu nav a:focus-visible {
+  color: #245964;
+  background: var(--surface-alt);
+  border-color: var(--border);
+}
+
+body:has(#theme-switch:checked) .product-card .price,
+body:has(#theme-switch:checked) .price {
+  color: #267a86;
+  text-shadow: none;
+}
+
+body:has(#theme-switch:checked) .field input,
+body:has(#theme-switch:checked) .field select,
+body:has(#theme-switch:checked) .field textarea,
+body:has(#theme-switch:checked) .filter-row select {
+  color: var(--text);
+  background: #f8fbfb;
+  border-color: var(--border);
 }
